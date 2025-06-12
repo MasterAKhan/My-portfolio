@@ -3,59 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name - Portfolio</title>
+  <title>Ahshan Khan - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/4b8b0b6e2a.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <div class="logo">AK</div>
+    <ul>
+      <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+      <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section id="about" class="container">
-    <img src="images/photo.jpg" alt="Your Photo" class="profile-photo" />
-    <h1>Your Name</h1>
-    <p class="subtitle">Web Developer | Student | Project Enthusiast</p>
-  </section>
-
-  <section id="projects" class="container">
-    <h2>My Projects</h2>
-    <div class="project-list">
-      <div class="project-card" onclick="showProject('Project 1: A simple to-do app built with HTML/CSS/JS.')">
-        <h3>Project 1</h3>
-        <p>Click to learn more</p>
-      </div>
-      <div class="project-card" onclick="showProject('Project 2: A portfolio website hosted on GitHub Pages.')">
-        <h3>Project 2</h3>
-        <p>Click to learn more</p>
+<div class="scroll-container">
+  <section id="about" class="section">
+    <div class="content">
+      <img src="images/photo.jpg" alt="My Photo" class="profile-photo" />
+      <h1>Ahshan Khan</h1>
+      <p class="subtitle">Web Developer | Student | AI/ML Enthusiast</p>
+      <p class="about-desc">Passionate about building modern web applications and exploring the world of Artificial Intelligence and Machine Learning. Always eager to learn and take on new challenges.</p>
+      <div class="social-links">
+        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
       </div>
     </div>
-    <div id="project-description"></div>
   </section>
 
-  <section id="contact" class="container">
-    <h2>Contact Me</h2>
-    <form onsubmit="handleSubmit(event)">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Your Name" required />
-      <label for="email">Your Email</label>
-      <input type="email" id="email" placeholder="Your Email" required />
-      <label for="message">Your Message</label>
-      <textarea id="message-input" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="message"></p>
+  <section id="skills" class="section">
+    <div class="content">
+      <h1>My Skills</h1>
+      <p>Here are some of my key skills:</p>
+      <ul class="skills-list">
+        <li><i class="fas fa-code"></i> HTML, CSS, JavaScript</li>
+        <li><i class="fas fa-robot"></i> AI/ML Basics (Python, TensorFlow)</li>
+        <li><i class="fas fa-mobile-alt"></i> Responsive Web Design</li>
+        <li><i class="fas fa-tools"></i> Git & GitHub</li>
+      </ul>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
-  </footer>
+  <section id="projects" class="section">
+    <div class="content">
+      <h1>My Projects</h1>
+      <div class="project-list">
+        <div class="project-card" onclick="showProject('Project 1: A simple to-do app built with HTML/CSS/JS. Features: Add, edit, delete tasks, and persistent storage.')">
+          <div class="project-icon"><i class="fas fa-tasks"></i></div>
+          <h3>To-Do App</h3>
+          <p>Task management made simple.</p>
+        </div>
+        <div class="project-card" onclick="showProject('Project 2: A portfolio website hosted on GitHub Pages. Features: Responsive design, project showcase, and contact form.')">
+          <div class="project-icon"><i class="fas fa-globe"></i></div>
+          <h3>Portfolio Website</h3>
+          <p>Personal branding and showcase.</p>
+        </div>
+        <div class="project-card" onclick="showProject('Project 3: AI/ML Playground. Features: Interactive demos of ML models and visualizations.')">
+          <div class="project-icon"><i class="fas fa-robot"></i></div>
+          <h3>AI/ML Playground</h3>
+          <p>Explore machine learning interactively.</p>
+        </div>
+      </div>
+      <div id="project-description"></div>
+    </div>
+  </section>
+</div>
 
-  <script src="script.js"></script>
+<footer>
+  <p>© 2025 Ahshan Khan. All rights reserved.
+    <a href="https://github.com/your-github-username" target="_blank" rel="noopener" title="GitHub" class="footer-icon">
+      <i class="fab fa-github"></i>
+    </a>
+  </p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
