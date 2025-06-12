@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="container">
+    <img src="images/photo.jpg" alt="Your Photo" class="profile-photo" />
+    <h1>Your Name</h1>
+    <p class="subtitle">Web Developer | Student | Project Enthusiast</p>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>My Projects</h2>
+    <div class="project-list">
+      <div class="project-card" onclick="showProject('Project 1: A simple to-do app built with HTML/CSS/JS.')">
+        <h3>Project 1</h3>
+        <p>Click to learn more</p>
+      </div>
+      <div class="project-card" onclick="showProject('Project 2: A portfolio website hosted on GitHub Pages.')">
+        <h3>Project 2</h3>
+        <p>Click to learn more</p>
+      </div>
+    </div>
+    <div id="project-description"></div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Me</h2>
+    <form onsubmit="handleSubmit(event)">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Your Email" required />
+      <label for="message">Your Message</label>
+      <textarea id="message-input" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="message"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
